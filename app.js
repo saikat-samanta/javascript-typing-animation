@@ -1,11 +1,11 @@
 const contentArr = ['Developer','Designer','Freelancer'];
-let textString='';
+let textString;
 let flag =false;
 let index =0;
 let speed = 400;
 
 let i = 0;
-const myTimer= () => {
+const typing= () => {
     if(flag){
         textString = contentArr[index].substring(0,i);
         document.querySelector('.type').textContent = textString;
@@ -27,9 +27,9 @@ const myTimer= () => {
     i++;
     if(textString ===contentArr[index]){
         flag = true;
-        speed /= 2;
+        speed /= 2.5;
     }
     }
 }
 
-var myVar = setInterval(myTimer, speed);
+var myVar = setInterval(typing, speed);
